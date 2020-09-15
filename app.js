@@ -10,26 +10,11 @@ app.set("view engine", "ejs");
 // SCHEMA SETUP
 const campgroundSchema = new mongoose.Schema({
   name: String,
-  image: String
+  image: String,
+  description: String
 });
 
 const Campground = mongoose.model("Campground", campgroundSchema);
-
-// Campground.create(
-//   {
-//     name: "Granite Hill",
-//     image:
-//       "https://www.nps.gov/grte/planyourvisit/images/JLCG_tents_Teewinot_2008_mattson_1.JPG",
-//   },
-//    (err, campground) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log("Newly created campground");
-//       console.log(campground);
-//     }
-//   }
-// );
 
 app.get("/", (req, res) => {
   res.render("landing");
@@ -40,7 +25,7 @@ app.get("/campgrounds", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("campgrounds", {campgrounds: allCampgrounds});
+      res.render("index", {campgrounds: allCampgrounds});
     }
   });
 });
@@ -59,6 +44,18 @@ app.post("/campgrounds", (req, res) => {
       console.log(err);
     } else {
       res.redirect("/campgrounds");
+    }
+  });
+});
+
+app.get("/campgrounds/:id", (req, res) => {
+  // Find the campground with provided ID
+  Campground.findById(req.params.id, (err, foundCampground) => {
+    if(err){
+      console.log(err);
+    } else {
+      // Render show template with that campground
+      res.render("show", {campground: foundCampground});
     }
   });
 });
