@@ -1,9 +1,35 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const mongoose =require("mongoose");
 
+mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+
+// SCHEMA SETUP
+const campgroundSchema = new mongoose.Schema({
+  name: String,
+  image: String
+});
+
+const Campground = mongoose.model("Campground", campgroundSchema);
+
+// Campground.create(
+//   {
+//     name: "Granite Hill",
+//     image:
+//       "https://www.nps.gov/grte/planyourvisit/images/JLCG_tents_Teewinot_2008_mattson_1.JPG",
+//   },
+//    (err, campground) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log("Newly created campground");
+//       console.log(campground);
+//     }
+//   }
+// );
 
 const campgrounds = [
   {
