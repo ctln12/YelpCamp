@@ -36,7 +36,7 @@ const seedDB = () => {
 
       // add a few campgrounds
       data.forEach((seed) => {
-        Campground.create(seed, (err, data) => {
+        Campground.create(seed, (err, campground) => {
           if (err) {
             console.log(err);
           } else {
