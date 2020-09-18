@@ -5,10 +5,10 @@ const mongoose =require("mongoose");
 const Campground = require("./models/campground");
 const seedDB = require("./seeds");
 
-seedDB();
 mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+seedDB();
 
 app.get("/", (req, res) => {
   res.render("landing");
@@ -50,7 +50,6 @@ app.get("/campgrounds/:id", (req, res) => {
       console.log(err);
     } else {
       // Render show template with that campground
-      console.log(foundCampground);
       res.render("show", {campground: foundCampground});
     }
   });
