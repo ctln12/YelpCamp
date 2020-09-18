@@ -45,11 +45,12 @@ app.post("/campgrounds", (req, res) => {
 
 app.get("/campgrounds/:id", (req, res) => {
   // Find the campground with provided ID
-  Campground.findById(req.params.id, (err, foundCampground) => {
+  Campground.findById(req.params.id).populate("comments").exec((err, foundCampground) => {
     if(err){
       console.log(err);
     } else {
       // Render show template with that campground
+      console.log(foundCampground);
       res.render("show", {campground: foundCampground});
     }
   });
