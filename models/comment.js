@@ -1,7 +1,7 @@
 // SCHEMA SETUP
 const mongoose = require("mongoose");
 
-const commentSchema = mongoose.Schema({
+const commentSchema = new mongoose.Schema({
   text: String,
   author: String
 });
