@@ -62,6 +62,11 @@ Each Campground has:
 * Add public directory
 * Add custom stylesheet
 
-### Add User Model (v6)
+### Auth Pt. 1 - Add User Model (v6)
 * Install all packages needed for auth
 * Define User model
+
+### Auth Pt. 3 - Register
+* Configure Passport
+* Add register routes
+* Add register template
