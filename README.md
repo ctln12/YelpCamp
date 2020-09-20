@@ -49,3 +49,7 @@ Each Campground has:
 ### Add the Comment model
 * Make our errors go away!
 * Display comments on campground show page
+
+### Comment New/Create
+* Add the comment NEW and CREATE routes
+* Add the new comment FORM
