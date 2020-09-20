@@ -111,6 +111,7 @@ app.post("/campgrounds/:id/comments", (req, res) => {
 // ===========
 // AUTH ROUTES
 // ===========
+// Sign up
 app.get("/register", (req, res) => {
   res.render("register");
 });
@@ -128,6 +129,17 @@ app.post("/register", (req, res) => {
     }
   });
 });
+
+// Login
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/campgrounds", failureRedirect: "/login"
+  }), (req, res) => {
+});
+
 
 app.listen(3000, () => {
   console.log("The Yelp Camp Server has started!");
