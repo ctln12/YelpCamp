@@ -30,6 +30,11 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 // Middleware
 const isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
