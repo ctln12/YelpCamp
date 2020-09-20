@@ -50,10 +50,10 @@ Each Campground has:
 * Make our errors go away!
 * Display comments on campground show page
 
-### Comment New/Create
+### Comment New/Create (v4)
 * Add the comment NEW and CREATE routes
 * Add the new comment FORM
 
-### Style Show Page
+### Style Show Page (v5)
 * Add sidebar to show page
 * Display comments nicely
