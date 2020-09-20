@@ -30,6 +30,14 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// Middleware
+const isLoggedIn = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect("/login");
+};
+
 // ROUTES
 app.get("/", (req, res) => {
   res.render("landing");
@@ -79,7 +87,7 @@ app.get("/campgrounds/:id", (req, res) => {
 // ========================
 // COMMENTS ROUTES
 // ========================
-app.get("/campgrounds/:id/comments/new", (req, res) => {
+app.get("/campgrounds/:id/comments/new", isLoggedIn, (req, res) => {
   Campground.findById(req.params.id, (err, campground) => {
     if(err){
       console.log(err);
@@ -89,7 +97,7 @@ app.get("/campgrounds/:id/comments/new", (req, res) => {
   });
 });
 
-app.post("/campgrounds/:id/comments", (req, res) => {
+app.post("/campgrounds/:id/comments", isLoggedIn, (req, res) => {
   Campground.findById(req.params.id, (err, campground) => {
     if(err){
       console.log(err);
