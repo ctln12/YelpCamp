@@ -53,3 +53,7 @@ Each Campground has:
 ### Comment New/Create
 * Add the comment NEW and CREATE routes
 * Add the new comment FORM
+
+### Style Show Page
+* Add sidebar to show page
+* Display comments nicely
