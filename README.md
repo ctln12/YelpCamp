@@ -83,5 +83,9 @@ Each Campground has:
 ### Auth Pt. 5 - Show/Hide links
 * Show/Hide auth links correctly
 
-### Refactor the routes
+### Refactor the routes (v7)
 * Use Express router to reorganize all routes
+
+### Users + Comments (v8)
+* Associate users and comments
+* Save author's name to a comment automatically
