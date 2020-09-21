@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const Campground = require("../models/campground");
 
+// Middleware
+const isLoggedIn = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect("/login");
+};
+
 // Campgrounds Index
 router.get("/", (req, res) => {
   Campground.find({}, (err, allCampgrounds) => {
@@ -14,12 +22,12 @@ router.get("/", (req, res) => {
 });
 
 // Campgrounds New
-router.get("/new", (req, res) => {
+router.get("/new", isLoggedIn, (req, res) => {
   res.render("campgrounds/new.ejs");
 });
 
 // Campgrounds Create
-router.post("/", (req, res) => {
+router.post("/", isLoggedIn, (req, res) => {
   const name = req.body.name;
   const image = req.body.image;
   const description = req.body.description;
