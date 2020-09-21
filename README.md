@@ -90,6 +90,6 @@ Each Campground has:
 * Associate users and comments
 * Save author's name to a comment automatically
 
-### Users + Campgrounds
+### Users + Campgrounds (v9)
 * Prevent an unauthenticated user from creating a campground
 * Save username + id to newly created campground
