@@ -93,3 +93,10 @@ Each Campground has:
 ### Users + Campgrounds (v9)
 * Prevent an unauthenticated user from creating a campground
 * Save username + id to newly created campground
+
+### Editing Campgrounds (v10)
+* Add method-override
+* Add EDIT route for campgrounds
+* Add link to edit page
+* Add UPDATE route
+* Fix $set problem
