@@ -129,5 +129,5 @@ Each Campground has:
 * Install and configure connect-flash
 * Add bootstrap alerts to header
 
-### Landing Page Refactor Pt. 1 (v12)
+### Landing Page Refactor (v12)
 * Add Full Screen Background Image Slider
