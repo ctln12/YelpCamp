@@ -133,4 +133,7 @@ Each Campground has:
 * Add Full Screen Background Image Slider
 
 ### Adding Dynamic Price Feature
-* Add dynamic price to campgrounds show template
+* Add price to Campground model
+* Add price to create campground route
+* Add price input to new and edit campground forms
+* Add campground price to show template
