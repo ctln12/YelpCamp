@@ -131,3 +131,6 @@ Each Campground has:
 
 ### Landing Page Refactor (v12)
 * Add Full Screen Background Image Slider
+
+### Adding Dynamic Price Feature
+* Add dynamic price to campgrounds show template
