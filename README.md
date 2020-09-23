@@ -1,10 +1,56 @@
 # YelpCamp
 
+### Description
+
+This project aims to build an application for people who like camping, want to share their favourite campgrouds and discover new ones. It's a CRUD app with authentication built with Node, Express and MongoDB.
+
+### Technologies
+
+*Languages:* Javascript, HTML, CSS
+
+*Database:* MongoDB
+
+*NPM Packages:* body-parser, connect-flash, ejs, express, express-session, method-override, mongoose, passport, passport-local, passport-local-mongoose
+
+*Runtime environment:* Node
+
+*Framework:* Bootstrap 3
+
+### Key features
+
+- View landing page
+- View all the campgrounds
+- View a campground
+- View all the comments of a campground
+- Sign up/Login
+- Create a new campground if authenticated
+- Create a new comment if authenticated
+- Edit a campground if authenticated and owner
+- Edit a comment if authenticated and owner
+- Delete a campground if authenticated and owner
+- Delete a comment if authenticated and owner
+
+### Project status
+
+The project isn't completely done.
+
+The signup/login forms should be worked on. Some additional features could be added such as adding a dynamic comment time/date, adding a footer, migrating to Bootstrap 4, adding a location and map for campgrounds, adding a search for campgrounds, creating a user profile...
+
+### Credits & Sources
+
+- Images from [Unsplash](https://unsplash.com/)
+- Campground descriptions from different [Lorem Ipsum generators](https://loremipsum.io/)
+- Final project built while completing [The Web Developer Bootcamp](https://www.udemy.com/course/the-web-developer-bootcamp/)
+
+---
+
+## Development Guidelines
+*provided by instructor Colt Steele*
+
 ### Initial Setup (v1)
 * Add Landing Page
 * Add Campgrounds Page that lists all campgrounds
-
-Each Campground has:
+* Create Campground model containing:
   * a Name
   * an Image
 
@@ -147,6 +193,8 @@ Each Campground has:
   * Add condition and flash message to checkCommentOwnership middleware if a comment can't be found
   * Add condition and flash message to comments EDIT route if a corresponding campground can't be found
 
-### Deploy v12
+### Deployment of v12
+* Add script "start": "node app.js" to package.json
+* Create Heroku app and push master to Heroku
 * Create a Mongo DB Atlas account and follow setup
-* Add connection to production DB to mongoose
+* Add production DB path to mongoose.connect
