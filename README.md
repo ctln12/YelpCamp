@@ -137,3 +137,12 @@ Each Campground has:
 * Add price to create campground route
 * Add price input to new and edit campground forms
 * Add campground price to show template
+
+### Handle errors to prevent app from crashing
+* Campgrounds NEW route:
+  * Add condition to checkCampgroundOwnership middleware if a campground can't be found
+* Campgrounds SHOW route:
+  * Add condition, flash message and redirection to SHOW route if a campground can't be found
+* Comments EDIT route:
+  * Add condition and flash message to checkCommentOwnership middleware if a comment can't be found
+  * Add condition and flash message to comments EDIT route if a corresponding campground can't be found
