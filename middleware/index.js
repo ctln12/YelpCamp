@@ -39,8 +39,8 @@ const checkCampgroundOwnership = (req, res, next) => {
 const checkCommentOwnership = (req, res, next) => {
   if (req.isAuthenticated()) {
     Comment.findById(req.params.comment_id, (err, foundComment) => {
-      if (err) {
-        console.log(err);
+      if (err || !foundComment) {
+        req.flash("error", "Comment not found");
         res.redirect("back");
       } else {
         if (foundComment.author.id.equals(req.user._id)) {
