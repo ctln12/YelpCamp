@@ -53,11 +53,19 @@ router.get("/:comment_id/edit", (req, res) => {
     } else {
       res.render("comments/edit", { campground_id: req.params.id, comment: foundComment });
     }
-  })
+  });
 });
 
 // Comments Update
-
+router.put("/:comment_id", (req, res) => {
+  Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, (err, updatedComment) => {
+    if(err){
+      res.redirect("back");
+    } else {
+      res.redirect("/campgrounds/" + req.params.id);
+    }
+  });
+});
 
 // Comments Destroy
 
