@@ -146,3 +146,6 @@ Each Campground has:
 * Comments EDIT route:
   * Add condition and flash message to checkCommentOwnership middleware if a comment can't be found
   * Add condition and flash message to comments EDIT route if a corresponding campground can't be found
+
+### Deploy v12
+* Create a Mongo DB Atlas account
