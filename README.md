@@ -148,4 +148,5 @@ Each Campground has:
   * Add condition and flash message to comments EDIT route if a corresponding campground can't be found
 
 ### Deploy v12
-* Create a Mongo DB Atlas account
+* Create a Mongo DB Atlas account and follow setup
+* Add connection to production DB to mongoose
