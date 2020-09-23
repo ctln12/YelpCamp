@@ -115,7 +115,7 @@ Each Campground has:
 * Add link to edit page
 * Add UPDATE route
 
-## Deleting Comments
+### Deleting Comments
 * Add DESTROY route
 * Add delete button
 
