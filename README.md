@@ -118,3 +118,9 @@ Each Campground has:
 ## Deleting Comments
 * Add DESTROY route
 * Add delete button
+
+### Authorization Part 2: Comments
+* User can only edit his/her comments
+* User can only delete his/her comments
+* Hide/Show edit and delete buttons
+* Refactor Middlewares
