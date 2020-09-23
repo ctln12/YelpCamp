@@ -128,3 +128,6 @@ Each Campground has:
 ### Adding in Flash! (v11)
 * Install and configure connect-flash
 * Add bootstrap alerts to header
+
+### Landing Page Refactor Pt. 1 (v12)
+* Add Full Screen Background Image Slider
