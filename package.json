@@ -1,14 +1,15 @@
 {
-  "name": "v3",
+  "name": "yelp_camp",
   "version": "1.0.0",
-  "description": "Yelp Camp v3",
+  "description": "YelpCamp v12",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "YelpCamp"
+    "url": "https://github.com/ctln12/YelpCamp"
   },
   "author": "Cataline Baert",
   "license": "ISC",
